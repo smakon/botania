@@ -126,8 +126,8 @@ body {
   gap: 1rem;
 }
 .main__photo-card > div > img {
-  width: 36rem;
-  height: 28rem;
+  width: 45dvw;
+  height: 75dvh;
   border-top-left-radius: 400px;
 }
 .main__date, .main__location {

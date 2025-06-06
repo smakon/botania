@@ -119,8 +119,8 @@ body {
          gap: 1rem;
       }
       & > div > img {
-         width: 36rem;
-         height: 28rem;
+         width: 45dvw;
+         height: 75dvh;
          border-top-left-radius: 400px;
       }
    }
@@ -130,12 +130,12 @@ body {
       color: $background-color;
    }
 
-   &__welcome-text{
+   &__welcome-text {
       padding-top: 2rem;
       width: 90%;
       @include display-flex(column, 10rem, normal, center);
       height: 100%;
-      & > h1{
+      & > h1 {
          font-size: larger;
       }
    }
