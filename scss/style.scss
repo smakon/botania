@@ -11,16 +11,28 @@
    scroll-behavior: smooth;
    border: none;
    outline: none;
-   // transition: all 0.3s ease;
+   transition: all 0.3s ease;
    color: $text-color;
 }
 
+html,
+body {
+   width: 100dvw;
+   height: 100dvh;
+}
+
+body {
+   @include display-flex(column, 0, center, center);
+}
+
 .flex-row {
-   @include display-flex(row, 0, center, center);
+   width: 100%;
+   @include display-flex(row, 0, space-between, center);
 }
 
 .flex-column {
-   @include display-flex(column, 0, center, center);
+   height: 100%;
+   @include display-flex(column, 0, space-between, center);
 }
 
 .header {
@@ -31,7 +43,6 @@
    padding-left: 25dvw;
    padding-right: 1dvw;
 
-
    position: fixed;
    top: 0;
    left: 0;
@@ -39,25 +50,93 @@
 
    @include display-flex(row, 0rem, center, center);
 
-   & > .flex-row{
+   & > .flex-row {
       width: 70dvw;
       justify-content: space-between;
    }
    &__li {
       color: $background-color;
       white-space: nowrap;
-      
    }
    &__logo {
-      width: 50px;
-      height: 50px;
+      width: 3rem;
+      height: 3rem;
       border-radius: 100px;
       background-color: lightgray;
    }
    &__nav {
-      
    }
    &__ul {
       @include display-flex(row, 14dvw, center, center);
+   }
+}
+
+.main {
+   width: 100%;
+   height: 90dvh;
+   margin-top: 11.2dvh;
+
+   background-color: $background-color;
+   &__section {
+      width: 100dvw;
+      height: 100%;
+
+      display: grid;
+      grid-template-columns: [left] 50% [right] 50%;
+
+      align-items: center;
+      justify-items: center;
+      &--welcome {
+      }
+   }
+
+   &__vine {
+      height: 100%;
+      width: 100%;
+      background-color: $vine-color;
+      overflow: hidden;
+
+      @include display-flex(column, 0, center, center);
+
+      &--top-left {
+         border-top-left-radius: 400px;
+      }
+   }
+
+   &__photo-card {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background-color: $images-background-color;
+
+      &--main-section {
+         width: 95%;
+         height: 95%;
+         border-top-left-radius: 400px;
+      }
+
+      & > .flex-column {
+         gap: 1rem;
+      }
+      & > div > img {
+         width: 36rem;
+         height: 28rem;
+         border-top-left-radius: 400px;
+      }
+   }
+
+   &__date,
+   &__location {
+      color: $background-color;
+   }
+
+   &__welcome-text{
+      padding-top: 2rem;
+      width: 90%;
+      @include display-flex(column, 10rem, normal, center);
+      height: 100%;
+      & > h1{
+         font-size: larger;
+      }
    }
 }
