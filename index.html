@@ -11,51 +11,66 @@
 			<div class="flex-row">
 				<nav class="header__nav">
 					<ul class="header__ul">
-						<a href="#main__section--about-us">
+						<a href="#section--about-us">
 							<li class="header__li">About us</li>
 						</a>
-						<a href="#main__section--price-list">
+						<a href="#section--price-list">
 							<li class="header__li">Price list</li>
 						</a>
-						<a href="#main__section--events">
+						<a href="#section--events">
 							<li class="header__li">Events</li>
 						</a>
 					</ul>
 				</nav>
-				<a href="#main__section--welcome">
+				<a href="#main">
 					<img class="header__logo" src="./assets/img/logo.png" alt="logo" />
 				</a>
 			</div>
 		</header>
-		<main class="main">
-			<section
-				class="main__section main__section--welcome"
-				id="main__section--welcome"
-			>
-				<div class="main__welcome-text">
-					<h1>
-						Добро пожаловать в место, где время замедляется, а сердце слышит
-						голос природы.
-					</h1>
-					<p>
-						<b><i>Наш ботанический сад</i></b> — это не просто парк, это убежище для души,
-						источник знаний и храм живой красоты.<br><br>Пусть каждый шаг среди цветов
-						и деревьев подарит вам вдохновение, спокойствие и связь с
-						естественным ритмом жизни.
-					</p>
-				</div>
-				<div class="main__vine main__vine--top-left">
-					<div class="main__photo-card main__photo-card--main-section">
-						<div class="flex-column">
-							<img src="./assets/img/welcome.png" alt="welcome image" />
-							<div class="flex-row">
-								<h4 class="main__date">06.06.2020</h4>
-								<h4 class="main__location">Botania Garden</h4>
-							</div>
+
+		<!-- Welcome section -->
+		<main class="main" id="main">
+			<div class="main__welcome-text">
+				<h1>
+					Добро пожаловать в место, где время замедляется, а сердце слышит голос
+					природы.
+				</h1>
+				<p>
+					<b><i>Наш ботанический сад</i></b> — это не просто парк, это убежище
+					для души, источник знаний и храм живой красоты.<br /><br />Пусть
+					каждый шаг среди цветов и деревьев подарит вам вдохновение,
+					спокойствие и связь с естественным ритмом жизни.
+				</p>
+			</div>
+			<div class="vine vine--top-left">
+				<div class="photo-card photo-card--main">
+					<div class="flex-column">
+						<img src="./assets/img/welcome.png" alt="welcome image" />
+						<div class="flex-row">
+							<h4 class="photo-card__date">06.06.2020</h4>
+							<h4 class="photo-card__location">Botania Garden</h4>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
+		<!-- Price list section -->
+		<section
+			class="section section--price-list"
+			id="section--price-list"
+		>
+			<div class="section__leaf-wrapper section__leaf-wrapper--left">
+				<div class="section__leaf section__leaf--left">
+					<h3 class="section__h3">Title</h3>
+					<div class="section__text section__text--leaf"></div>
+				</div>
+			</div>
+			<div class="section__leaf-wrapper section__leaf-wrapper--right">
+				<div class="section__leaf section__leaf--right">
+					<h3 class="section__h3">Title</h3>
+					<div class="section__text section__text--leaf"></div>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
