@@ -5,7 +5,6 @@
    margin: 0;
    box-sizing: border-box;
    font-family: "Poppins", sans-serif;
-   font-size: x-large;
    text-decoration: none;
    list-style: none;
    scroll-behavior: smooth;
@@ -13,6 +12,10 @@
    outline: none;
    transition: all 0.3s ease;
    color: $text-color;
+}
+
+*:not(h1, h2, h3, h4, h5) {
+   font-size: x-large;
 }
 
 body {
@@ -30,6 +33,7 @@ body {
 }
 
 .header {
+   z-index: 3;
    background-color: $vine-color-darker;
 
    padding-top: 0.5rem;
@@ -69,7 +73,6 @@ body {
    width: 100%;
    height: 100dvh;
    padding-top: 11.2dvh;
-
    display: grid;
    grid-template-columns: [left] 50% [right] 50%;
    justify-items: center;
@@ -87,9 +90,14 @@ body {
    }
 }
 
+
+
 .section {
    width: 100%;
-   height: 89dvh;
+   height: auto;
+   min-height: 90.2dvh;
+
+   scroll-margin-top: 11dvh;
 
    display: grid;
    grid-template-columns: [left] 50% [right] 50%;
@@ -99,12 +107,25 @@ body {
 
    background-color: $background-color;
 
-   .text {
+   &__text {
       &--leaf {
+      }
+
+      &--event {
+         width: 80%;
+
+         @include display-flex(column, 2rem, center, center);
+         & > li {
+            list-style-type: disc;
+         }
       }
    }
 
    .h3 {
+   }
+
+   &__h2{
+      font-weight: bold;
    }
 
    &__leaf-wrapper {
@@ -138,6 +159,13 @@ body {
          border-radius: $leaf-border-radius 0;
       }
    }
+
+   &--events {
+      & > div.vine.vine--top-left > .flex-column {
+         padding-left: 5rem;
+         gap: 3rem;
+      }
+   }
 }
 
 .vine {
@@ -157,9 +185,27 @@ body {
    width: 100%;
    height: 100%;
    padding: 1rem;
+   padding-bottom: 0.3rem;
    background-color: $images-background-color;
 
    @include display-flex(column, 0, center, center);
+
+   img {
+      width: 100%;
+      height: 100%;
+   }
+
+   &--event {
+      &:nth-child(1) {
+         align-self: baseline;
+         margin-left: 3rem;
+      }
+      &:nth-child(2) {
+         align-self: flex-end;
+         margin-right: 3rem;
+      }
+      width: 49%;
+   }
 
    &--main {
       width: calc(100% - 6.7%);
@@ -168,19 +214,27 @@ body {
 
       margin-top: auto;
       margin-left: auto;
+
+      & > div > img {
+         width: 45dvw;
+         height: 75dvh;
+         border-top-left-radius: 400px;
+      }
    }
 
    & > .flex-column {
       gap: 0.5rem;
    }
-   & > div > img {
-      width: 45dvw;
-      height: 75dvh;
-      border-top-left-radius: 400px;
-   }
 
    &__date,
    &__location {
+      &--event {
+         font-size: medium;
+      }
       color: $background-color;
    }
+}
+
+.events-photo {
+   @include display-flex(column, 1rem, center, center);
 }
