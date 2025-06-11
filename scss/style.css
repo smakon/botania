@@ -103,7 +103,9 @@ body {
 }
 .main__welcome-text {
   padding-top: 2rem;
-  width: 90%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-right: 20px solid #4b3e2b;
   display: flex;
   flex-direction: column;
   justify-content: normal;
@@ -180,6 +182,22 @@ li {
   padding-left: 5rem;
   gap: 3rem;
 }
+.section--about-us {
+  display: inline-block;
+}
+.section--about-us > div > h2,
+.section--about-us p,
+.section--about-us li,
+.section--about-us span {
+  color: #f0ead6;
+}
+
+.ul__enumeration {
+  padding-left: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
 
 .vine {
   height: 100%;
@@ -192,11 +210,39 @@ li {
   align-items: center;
   gap: 0;
 }
+.vine--main {
+  border-left: 20px solid #4b3e2b;
+}
+.vine--dark {
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: #2d5d2c;
+  height: calc(100vh - 9dvh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10dvh;
+}
+.vine--bottom-left {
+  border-bottom-left-radius: 400px;
+}
+.vine--top-right {
+  border-top-right-radius: 400px;
+}
 .vine--top-left {
   border-top-left-radius: 400px;
 }
-.vine--gradient {
+.vine--gradient-top2bottom {
   background: linear-gradient(0deg, #2d5d2c 0%, #a8c686 20%);
+}
+.vine--gradient-bottom2top {
+  background: linear-gradient(180deg, #2d5d2c 0%, #a8c686 20%);
+}
+.vine--half {
+  align-self: flex-end;
+  height: 60%;
 }
 
 .photo-card {

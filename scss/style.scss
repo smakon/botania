@@ -93,7 +93,11 @@ body {
 
    &__welcome-text {
       padding-top: 2rem;
-      width: 90%;
+      padding-left:4rem;
+      padding-right: 4rem;
+
+      border-right: 20px solid $images-background-color;
+
       @include display-flex(column, 10rem, normal, center);
       height: 100%;
       & > h1 {
@@ -177,8 +181,25 @@ li {
          gap: 3rem;
       }
    }
-}
 
+   &--about-us {
+      & > div > h2,
+      p,
+      li,
+      span {
+         color: $background-color;
+      }
+      display: inline-block;
+   }
+}
+.ul {
+   &__enumeration {
+      padding-left: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+   }
+}
 .vine {
    height: 100%;
    width: 100%;
@@ -186,13 +207,41 @@ li {
    overflow: hidden;
 
    @include display-flex(column, 0, center, center);
+   &--main {
+      border-left: 20px solid $images-background-color;
+   }
+   &--dark {
+      padding-top: 1rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
 
+      background-color: $vine-color-darker;
+      height: calc(100vh - 9dvh);
+
+      @include display-flex(column, 10dvh, center, center);
+   }
+   &--bottom-left {
+      border-bottom-left-radius: 400px;
+   }
+   &--top-right {
+      border-top-right-radius: 400px;
+   }
    &--top-left {
       border-top-left-radius: 400px;
    }
 
    &--gradient {
-      background: linear-gradient(0deg, #2d5d2c 0%, #a8c686 20%);
+      &-top2bottom {
+         background: linear-gradient(0deg, #2d5d2c 0%, #a8c686 20%);
+      }
+      &-bottom2top {
+         background: linear-gradient(180deg, #2d5d2c 0%, #a8c686 20%);
+      }
+   }
+
+   &--half {
+      align-self: flex-end;
+      height: 60%;
    }
 }
 
