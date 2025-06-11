@@ -42,6 +42,16 @@ body {
   gap: 0;
 }
 
+.span {
+  text-align: start;
+}
+.span--bold {
+  font-weight: bold;
+}
+.span--italic {
+  font-style: italic;
+}
+
 .header {
   z-index: 3;
   background-color: #2d5d2c;
@@ -66,6 +76,7 @@ body {
 .header__li {
   color: #f0ead6;
   white-space: nowrap;
+  list-style-type: none;
 }
 .header__logo {
   width: 3rem;
@@ -104,6 +115,10 @@ body {
   font-size: larger;
 }
 
+li {
+  list-style-type: disc;
+}
+
 .section {
   width: 100%;
   height: auto;
@@ -122,9 +137,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
-.section__text--event > li {
-  list-style-type: disc;
 }
 .section__h2 {
   font-weight: bold;
@@ -182,6 +194,9 @@ body {
 }
 .vine--top-left {
   border-top-left-radius: 400px;
+}
+.vine--gradient {
+  background: linear-gradient(0deg, #2d5d2c 0%, #a8c686 20%);
 }
 
 .photo-card {
