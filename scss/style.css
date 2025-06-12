@@ -243,6 +243,27 @@ li {
 .vine--half {
   align-self: flex-end;
   height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.vine--half > div {
+  width: 60%;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.map > iframe {
+  width: 80%;
+  height: 80%;
+  border: 40px solid #4b3e2b;
 }
 
 .photo-card {
@@ -280,7 +301,7 @@ li {
   margin-left: auto;
 }
 .photo-card--main > div > img {
-  width: 45dvw;
+  width: 42dvw;
   height: 75dvh;
   border-top-left-radius: 400px;
 }

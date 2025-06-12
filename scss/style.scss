@@ -93,7 +93,7 @@ body {
 
    &__welcome-text {
       padding-top: 2rem;
-      padding-left:4rem;
+      padding-left: 4rem;
       padding-right: 4rem;
 
       border-right: 20px solid $images-background-color;
@@ -221,13 +221,13 @@ li {
       @include display-flex(column, 10dvh, center, center);
    }
    &--bottom-left {
-      border-bottom-left-radius: 400px;
+      border-bottom-left-radius: $border-radius;
    }
    &--top-right {
-      border-top-right-radius: 400px;
+      border-top-right-radius: $border-radius;
    }
    &--top-left {
-      border-top-left-radius: 400px;
+      border-top-left-radius: $border-radius;
    }
 
    &--gradient {
@@ -242,6 +242,22 @@ li {
    &--half {
       align-self: flex-end;
       height: 60%;
+
+      @include display-flex(column, 1rem, center, flex-end);
+
+      & > div{
+         width: 60%;
+      }
+   }
+}
+
+.map {
+   @include display-flex(column, 1rem, center, center);
+   & > iframe {
+      width: 80%;
+      height: 80%;
+   
+      border: 40px solid $images-background-color;
    }
 }
 
@@ -280,7 +296,7 @@ li {
       margin-left: auto;
 
       & > div > img {
-         width: 45dvw;
+         width: 42dvw;
          height: 75dvh;
          border-top-left-radius: 400px;
       }
