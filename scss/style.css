@@ -51,6 +51,9 @@ body {
 .span--italic {
   font-style: italic;
 }
+.span--x-large {
+  font-size: larger;
+}
 
 .header {
   z-index: 3;
@@ -132,6 +135,12 @@ li {
   justify-items: center;
   background-color: #f0ead6;
 }
+.section__text--leaf > .flex-column {
+  gap: 4dvh;
+}
+.section__text--leaf > div > .flex-row {
+  gap: 2dvw;
+}
 .section__text--event {
   width: 80%;
   display: flex;
@@ -166,7 +175,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0rem;
+  gap: 5dvh;
   width: 100%;
   height: 100%;
 }
@@ -321,4 +330,27 @@ li {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  min-height: 11dvh;
+  background-color: #4b3e2b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1dvw;
+}
+.footer a {
+  text-decoration: underline;
+}
+.footer * {
+  color: #f0ead6;
+  font-size: medium;
+}
+.footer .flex-column {
+  gap: 1dvh;
+  align-items: baseline;
 }/*# sourceMappingURL=style.css.map */
