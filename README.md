@@ -2,7 +2,7 @@
 
 <style>
    *{
-      /* scroll-behavior: smooth; */
+      scroll-behavior: smooth;
       border: none;
       transition: all 0.3s ease;
    }
