@@ -1,7 +1,7 @@
 <h1>Botania Garden</h1>
 
 <style>
-   *{
+   \*{
       scroll-behavior: smooth;
       border: none;
       transition: all 0.3s ease;
