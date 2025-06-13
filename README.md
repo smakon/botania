@@ -1,19 +1,21 @@
 <h1>Botania Garden</h1>
 
-<style>
-   \*{
-      scroll-behavior: smooth;
-      border: none;
-      transition: all 0.3s ease;
-   }
-   li{
-      color: white;
-   }
-   .span--bold{
-      font-weight: bold;
-   }
+<html>
+   <style>
+      *{
+         scroll-behavior: smooth;
+         border: none;
+         transition: all 0.3s ease;
+      }
+      li{
+         color: white;
+      }
+      .span--bold{
+         font-weight: bold;
+      }
 
-</style>
+   </style>
+</html>
 
 <span class="span span--bold">
    Click on your Language:
