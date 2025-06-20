@@ -31,7 +31,7 @@
 
     ❌ Adaptive / Responsive Layout
 
-    ❌ Mobil-first
+    ❌ Mobile-first
 
     ✅ Desctop-first
 
@@ -55,7 +55,7 @@
 
     ❌ Адаптивная / Отзывчивая вёрстка
 
-    ❌ Mobil-first
+    ❌ Mobile-first
 
     ✅ Desctop-first
 
